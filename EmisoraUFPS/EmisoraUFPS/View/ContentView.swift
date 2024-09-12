@@ -12,6 +12,31 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             
+            TabView{
+                ProgramView()
+                    .tabItem{
+                        Image(systemName: "clock.fill")
+                        Text("Programación")
+                    }
+                TeamView()
+                    .tabItem{
+                        Image(systemName: "person.2")
+                        Text("Equipo")
+                    }
+                ProgramsView()
+                    .tabItem{
+                        Image(systemName: "calendar.circle")
+                        Text("Programas")
+                    }
+            }
+            .accentColor(Color(hex: 0xcf010b))
+            VStack{
+                Spacer()
+                RadioPlayerView()
+                HStack{
+                }
+                .frame(height: 35)
+            }
         }
     }
 }
@@ -19,6 +44,13 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+
+
+
+
+
+
 
 extension Color {
     init(hex: UInt, alpha: Double = 1) {
@@ -48,4 +80,39 @@ extension Color {
      .cornerRadius(30)
      Spacer()
  }
+ */
+
+
+/*
+ TabView{
+         ForEach(Tab.allCases, id: \.rawValue){ tab in
+             Text(tab.rawValue)
+                 .tag(tab)
+                 .tabItem{
+                     Image(systemName: tab.symbol)
+                     Text(tab.rawValue)
+                 }
+         }
+ }
+ */
+
+
+/*
+ Text("Programación")
+     .tabItem{
+         Image(systemName: "clock.fill")
+         Text("Programación")
+     }
+ 
+ Text("Equipo")
+     .tabItem{
+         Image(systemName: "person.circle.fill")
+         Text("Equipo")
+     }
+ 
+ Text("Programas")
+     .tabItem{
+         Image(systemName: "list.bullet.rectangle.fill")
+         Text("Programas")
+     }
  */

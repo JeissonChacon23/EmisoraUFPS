@@ -6,20 +6,106 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		16EA6CC02C9365180090278F /* LiveActivityExtension.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 16EA6CB72C9365180090278F /* LiveActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16EA6CBE2C9365180090278F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1674F6942C91FD9C00DA63F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16EA6CB62C9365180090278F;
+			remoteInfo = LiveActivityExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		16EA6C962C93620B0090278F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EA6CC52C9365180090278F /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				16EA6CC02C9365180090278F /* LiveActivityExtension.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1674F69C2C91FD9C00DA63F9 /* EmisoraUFPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmisoraUFPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16EA6C7D2C9362090090278F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		16EA6C7F2C9362090090278F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		16EA6CB72C9365180090278F /* LiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = LiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		16EA6C762C935F110090278F /* Exceptions for "EmisoraUFPS" folder in "EmisoraUFPS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1674F69B2C91FD9C00DA63F9 /* EmisoraUFPS */;
+		};
+		16EA6CC42C9365180090278F /* Exceptions for "LiveActivityExtension" folder in "LiveActivityExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 16EA6CB62C9365180090278F /* LiveActivityExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1674F69E2C91FD9C00DA63F9 /* EmisoraUFPS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				16EA6C762C935F110090278F /* Exceptions for "EmisoraUFPS" folder in "EmisoraUFPS" target */,
+			);
 			path = EmisoraUFPS;
+			sourceTree = "<group>";
+		};
+		16EA6C812C9362090090278F /* Widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		16EA6C9E2C9363550090278F /* LiveActivityExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LiveActivityExtension;
+			sourceTree = "<group>";
+		};
+		16EA6CB82C9365180090278F /* LiveActivityExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				16EA6CC42C9365180090278F /* Exceptions for "LiveActivityExtension" folder in "LiveActivityExtension" target */,
+			);
+			path = LiveActivityExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1674F6992C91FD9C00DA63F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EA6CB42C9365180090278F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +119,10 @@
 			isa = PBXGroup;
 			children = (
 				1674F69E2C91FD9C00DA63F9 /* EmisoraUFPS */,
+				16EA6C812C9362090090278F /* Widget */,
+				16EA6C9E2C9363550090278F /* LiveActivityExtension */,
+				16EA6CB82C9365180090278F /* LiveActivityExtension */,
+				16EA6C7C2C9362090090278F /* Frameworks */,
 				1674F69D2C91FD9C00DA63F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +131,18 @@
 			isa = PBXGroup;
 			children = (
 				1674F69C2C91FD9C00DA63F9 /* EmisoraUFPS.app */,
+				16EA6CB72C9365180090278F /* LiveActivityExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		16EA6C7C2C9362090090278F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16EA6C7D2C9362090090278F /* WidgetKit.framework */,
+				16EA6C7F2C9362090090278F /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +155,13 @@
 				1674F6982C91FD9C00DA63F9 /* Sources */,
 				1674F6992C91FD9C00DA63F9 /* Frameworks */,
 				1674F69A2C91FD9C00DA63F9 /* Resources */,
+				16EA6C962C93620B0090278F /* Embed Foundation Extensions */,
+				16EA6CC52C9365180090278F /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				16EA6CBF2C9365180090278F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				1674F69E2C91FD9C00DA63F9 /* EmisoraUFPS */,
@@ -69,6 +172,28 @@
 			productName = EmisoraUFPS;
 			productReference = 1674F69C2C91FD9C00DA63F9 /* EmisoraUFPS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		16EA6CB62C9365180090278F /* LiveActivityExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16EA6CC12C9365180090278F /* Build configuration list for PBXNativeTarget "LiveActivityExtension" */;
+			buildPhases = (
+				16EA6CB32C9365180090278F /* Sources */,
+				16EA6CB42C9365180090278F /* Frameworks */,
+				16EA6CB52C9365180090278F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				16EA6CB82C9365180090278F /* LiveActivityExtension */,
+			);
+			name = LiveActivityExtension;
+			packageProductDependencies = (
+			);
+			productName = LiveActivityExtension;
+			productReference = 16EA6CB72C9365180090278F /* LiveActivityExtension.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +206,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					1674F69B2C91FD9C00DA63F9 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					16EA6CB62C9365180090278F = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -100,12 +228,20 @@
 			projectRoot = "";
 			targets = (
 				1674F69B2C91FD9C00DA63F9 /* EmisoraUFPS */,
+				16EA6CB62C9365180090278F /* LiveActivityExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1674F69A2C91FD9C00DA63F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EA6CB52C9365180090278F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +258,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		16EA6CB32C9365180090278F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16EA6CBF2C9365180090278F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16EA6CB62C9365180090278F /* LiveActivityExtension */;
+			targetProxy = 16EA6CBE2C9365180090278F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1674F6A82C91FD9D00DA63F9 /* Debug */ = {
@@ -255,11 +406,16 @@
 				DEVELOPMENT_TEAM = 7K5YU7XR67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmisoraUFPS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "UFPS 95.2";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,11 +440,16 @@
 				DEVELOPMENT_TEAM = 7K5YU7XR67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmisoraUFPS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "UFPS 95.2";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,6 +457,56 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeissonchacon.EmisoraUFPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		16EA6CC22C9365180090278F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7K5YU7XR67;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveActivityExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LiveActivityExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeissonchacon.EmisoraUFPS.LiveActivityExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16EA6CC32C9365180090278F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7K5YU7XR67;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveActivityExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LiveActivityExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeissonchacon.EmisoraUFPS.LiveActivityExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,6 +530,15 @@
 			buildConfigurations = (
 				1674F6AB2C91FD9D00DA63F9 /* Debug */,
 				1674F6AC2C91FD9D00DA63F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16EA6CC12C9365180090278F /* Build configuration list for PBXNativeTarget "LiveActivityExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EA6CC22C9365180090278F /* Debug */,
+				16EA6CC32C9365180090278F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
